@@ -2,5 +2,5 @@
   "watch": [],
   "ignore": ["node_modules"],
   "ext": ".json,.js,.ts,.env,.html",
-  "exec": "node index"
+  "exec": "node server"
 }

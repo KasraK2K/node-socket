@@ -105,6 +105,12 @@
         console.log("online users:", users);
       });
 
+      socket.emit("join room", "room1", "Hasan");
+
+      socket.on("room event", (roomName, name) => {
+        console.log(name + " is joined to room " + roomName);
+      });
+
       function addMessage(msg, name) {
         var item = document.createElement("li");
         item.textContent = name + ": " + msg;
