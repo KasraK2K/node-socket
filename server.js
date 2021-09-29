@@ -3,9 +3,7 @@ const { app, server, io, port } = bootstrap;
 const events = require("./application/socket");
 
 // ─── ROUTER ─────────────────────────────────────────────────────────────────────
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/client/index.html");
-});
+app.use("/", require("./application/routes"));
 
 // ─── SOCKET ─────────────────────────────────────────────────────────────────────
 io.on("connection", () => events);
